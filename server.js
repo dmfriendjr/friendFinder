@@ -7,6 +7,8 @@ const express = require('express'),
 const apiRoutes = require('./app/routing/apiRoutes'),
     htmlRoutes = require('./app/routing/htmlRoutes');
     
+
+app.use(express.static('./app/public'));
 app.use(bodyParser());
 
 app.use('/api', apiRoutes);

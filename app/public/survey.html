@@ -5,8 +5,144 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-    Survey Here 
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                Survey
+            </div>
+            <form id="survey-form">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="nameInput">Your Name</label>
+                                <input type="text" name="name" class="form-control" placeholder="Enter name">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="photoUrlInput">Your Photo</label>
+                                <input type="text" class="form-control" name="photoUrl" placeholder="Photo URL">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h5 class="card-title">Please answer each question below honestly on a scale of 1-5, with 1 being strongly disagree and 5 being strongly agree.</h5>
+                    </div>
+                    <hr>
+                    <div class="row form-group">
+                        <h6>You accept things as they are</h6>
+                        <select name="question" class="form-control">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                        </select>
+                    </div>
+                    <div class="row form-group">
+                            <h6>You tend to wait until the last minute to complete a task</h6>
+                            <select name="question" class="form-control">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                            </select>
+                    </div>
+                    <div class="row form-group">
+                            <h6>You prefer working hard to playing hard</h6>
+                            <select name="question" class="form-control">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                            </select>
+                    </div>
+                    <div class="row form-group">
+                            <h6>You are very thick-skinned and hard to offend</h6>
+                            <select name="question" class="form-control">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                            </select>
+                    </div>
+                    <div class="row form-group">
+                            <h6>You prefer multiple choice tests over free form essays</h6>
+                            <select name="question" class="form-control">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                            </select>
+                    </div>
+                    <div class="row form-group">
+                            <h6>You work best in groups rather than alone</h6>
+                            <select name="question" class="form-control">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                            </select>
+                    </div>
+                    <div class="row form-group">
+                            <h6>You are bored when you are not around other people</h6>
+                            <select name="question" class="form-control">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                            </select>
+                    </div>
+                    <div class="row form-group">
+                            <h6>You tend to be skeptical rather than taking something on 'faith'</h6>
+                            <select name="question" class="form-control">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                            </select>
+                    </div>
+                    <div class="row form-group">
+                            <h6>Your home is usually very clean and organized</h6>
+                            <select name="question" class="form-control">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                            </select>
+                    </div>
+                    <div class="row form-group">
+                            <h6>You tend to live in the moment rather than look ahead to future possibilities</h6>
+                            <select name="question" class="form-control">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                            </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="submit-btn">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>    
+    <script src="./survey.js"></script>
 </body>
 </html>
