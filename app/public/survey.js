@@ -1,7 +1,7 @@
 document.getElementById('survey-form').addEventListener('submit', (event) => {
     event.preventDefault();
     let data = $('#survey-form').serializeArray();
-    
+    $('#survey-form')[0].reset();
     let newFriend = {
         name: data[0].value,
         photo: data[1].value,
@@ -13,7 +13,9 @@ document.getElementById('survey-form').addEventListener('submit', (event) => {
         url: '/api/friends',
         data: newFriend,
         success: function(res) {
-            console.log(res);
+            $('#match-modal .modal-title').html(res.name);
+            $('#match-modal #match-image').attr('src', res.photo);
+            $('#match-modal').modal();
         },
         error: function(err) {
             throw err;
