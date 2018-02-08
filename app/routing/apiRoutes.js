@@ -11,13 +11,12 @@ router.get('/friends', (req, res) => {
 router.post('/friends', (req, res) => {
 	let result = findCompatibleFriend(req.body);
 	friends.addFriend(req.body);
-	console.log(result);
 	res.json(result);
 });
 
 function findCompatibleFriend(userData) {
 	let bestMatch;
-	let bestScore = Infinity;
+  let bestScore = Infinity;
 
 	friends.getFriends().forEach(friend => {
 		let score = friend.scores.reduce((total, current, index) => total + Math.abs(current - userData.scores[index]), 0)

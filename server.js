@@ -10,7 +10,7 @@ const apiRoutes = require('./app/routing/apiRoutes'),
 const port = process.env.PORT || 8080;
 
 app.use(express.static('./app/public'));
-app.use(bodyParser());
+app.use(bodyParser.json());
 
 app.use('/api', apiRoutes);
 app.use('/', htmlRoutes);

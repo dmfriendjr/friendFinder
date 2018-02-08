@@ -11,7 +11,8 @@ document.getElementById('survey-form').addEventListener('submit', (event) => {
     $.ajax({
         type: 'POST',
         url: '/api/friends',
-        data: newFriend,
+        data: JSON.stringify(newFriend),
+        contentType: 'application/json',
         success: function(res) {
             $('#match-modal .modal-title').html(res.name);
             $('#match-modal #match-image').attr('src', res.photo);
